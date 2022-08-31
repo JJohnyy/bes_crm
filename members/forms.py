@@ -9,12 +9,12 @@ User = get_user_model()
 class CustomUserCreationForm(UserCreationForm):
     ''' custom user cretaion form '''
     required_css_class = 'required-field'
-    username = forms.CharField()
-    email = forms.EmailField()
-    first_name = forms.CharField()
-    last_name = forms.CharField()
-    password1 = forms.CharField()
-    password2 = forms.CharField()
+    username = forms.CharField(max_length = 20)
+    email = forms.EmailField(max_length = 20)
+    first_name = forms.CharField(max_length = 20)
+    last_name = forms.CharField(max_length = 20)
+    password1 = forms.CharField(max_length = 20)
+    password2 = forms.CharField(max_length = 20)
 
     class Meta:
         model = User
@@ -60,7 +60,7 @@ class CustomUserCreationForm(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
         """
-        remove labels
+        remove labels, add placeholders
         """
         super().__init__(*args, **kwargs)
         placeholders = {
@@ -81,27 +81,12 @@ class CustomUserEditForm(UserChangeForm):
     class Meta:
         model = User
         exclude = {
+            'password',
             'last_login',
             'is_superuser',
             'groups',
             'date_joined',
             'user_permissions',
             'is_active',
-            'is_staff'
+            'is_staff',
         }
-
-    def __init__(self, *args, **kwargs):
-        """
-        remove labels
-        """
-        super().__init__(*args, **kwargs)
-        placeholders = {
-            'username': 'Username',
-            'email': 'Email',
-            'first_name': 'First Name',
-            'last_name': 'Last Name',
-        }
-        for field in self.fields:
-            placeholder = placeholders[field]
-            self.fields[field].label = ''
-            self.fields[field].widget.attrs['placeholder'] = placeholder
