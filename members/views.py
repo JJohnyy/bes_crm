@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import reverse
 from django.views import generic
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
@@ -8,9 +8,10 @@ from django.urls import reverse_lazy
 class UserRegisterView(generic.CreateView):
     form_class = UserCreationForm
     template_name = "registration/registration.html"
-    succes_url = reverse_lazy('login')
+    
+    def get_success_url(self):
+        return reverse("login")
 
-class DashboardView(generic.CreateView):
+class DashboardView(generic.TemplateView):
     template_name = "members/dashboard.html"
     success_url = reverse_lazy('dashboard')
-

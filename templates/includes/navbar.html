@@ -2,8 +2,12 @@
     <nav>
         <ul>
             <li><a href="{% url 'home' %}">home</a></li>
+            {% if request.user.is_authenticated %}
+            <li><a href="{% url 'dashboard' %}">dashboard</a></li>
+            {% else %}
             <li><a href="{% url 'register' %}">signup</a></li>
             <li><a href="{%  url 'login' %}">login</a></li>
+            {% endif %}
             <li><a href=""></a>logout</li>
         </ul>
     </nav>
