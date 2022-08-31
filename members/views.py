@@ -2,9 +2,8 @@ from django.shortcuts import reverse
 from django.contrib import messages
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.forms import UserChangeForm
 from django.urls import reverse_lazy
-from .forms import CustomUserCreationForm
+from .forms import CustomUserCreationForm, CustomUserEditForm
 
 # Create your views here.
 
@@ -20,7 +19,7 @@ class UserRegisterView(generic.CreateView):
 
 class UserEditView(LoginRequiredMixin, generic.UpdateView):
     ''''updates user data'''
-    form_class = UserChangeForm
+    form_class = CustomUserEditForm
     template_name = "members/profile_edit.html"
 
     def get_object(self):
