@@ -9,7 +9,7 @@ from .forms import CustomUserCreationForm
 # Create your views here.
 
 
-class CustomUserCreationForm(generic.CreateView):
+class UserRegisterView(generic.CreateView):
     '''creates user'''
     form_class = CustomUserCreationForm
     template_name = "registration/registration.html"
