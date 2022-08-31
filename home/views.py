@@ -4,7 +4,8 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request, 'home.html')
+    ''' view to render a home page '''
+    return render(request, 'home/home.html')
 
 
 
