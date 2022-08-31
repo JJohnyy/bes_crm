@@ -37,15 +37,6 @@
 
 {% block postloadjs %}
 <script>
-    $(function() {
-$("li").click(function() {
-  // remove classes from all
-  $("li").removeClass("active");
-  // add class to the one we clicked
-  $(this).addClass("active");
-  // stop the page from jumping to the top
-  return false;
-});
-});
+$('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
 </script>
 {% endblock %}
