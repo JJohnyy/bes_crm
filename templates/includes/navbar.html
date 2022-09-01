@@ -1,42 +1,60 @@
 {% load static %}
 
-{% block corecss %}
-<link rel="stylesheet" href="{% static 'css/navbar/navbar.css' %}">
-{% endblock %}
-
 <div>
     <nav>
-        <ul>
-            <li>
-                <a href="{% url 'home' %}">home</a>
-            </li>
-            {% if request.user.is_authenticated %}
-            <li>
-                <a class="active" href="{% url 'dashboard' %}">dashboard</a>
-            </li>
-            <li>
-                <a class="" href="{% url 'edit_profile' %}">update profile</a>
-            </li>
-            <li>
-                <a href="{% url 'leads' %}">leads</a>
-            </li>
-            {% else %}
-            <li>
-                <a href="{% url 'register' %}">signup</a>
-            </li>
-            <li>
-                <a href="{%  url 'login' %}">login</a>
-            </li>
-            {% endif %}
-            <li>
-                <a href="{% url 'logout' %}">logout</a>
-            </li>
-        </ul>
+        <div class="main_list" id="mainListDiv">
+            <ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">home</a>
+                </li>
+                {% if request.user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" class="active" href="{% url 'dashboard' %}">dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" class="" href="{% url 'edit_profile' user.pk %}">update profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'leads' %}">leads</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'register' %}">signup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{%  url 'login' %}">login</a>
+                </li>
+                {% endif %}
+                {% if request.user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">logout</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="media_button">
+            <button class="main_media_button" id="mediaButton">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </nav>
 </div>
 
 {% block postloadjs %}
 <script>
-$('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+    var mainListDiv = document.getElementById("mainListDiv"),
+    mediaButton = document.getElementById("mediaButton");
+
+mediaButton.onclick = function () {
+    
+    "use strict";
+    
+    mainListDiv.classList.toggle("show_list");
+    mediaButton.classList.toggle("active");
+    
+};
 </script>
+
 {% endblock %}

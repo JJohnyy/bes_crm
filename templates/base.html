@@ -10,17 +10,20 @@
     <title>BES CRM</title>
 
 
-{% block corecss %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    {% block corecss %}
     <link rel="stylesheet" href="{% static 'css/base/base.css' %}">
-{% endblock %}
+    {% endblock %}
+
+    {% block corejs %}
+    {% endblock %}
+
 </head>
 
 <body>
 
 
-<!-- includes navbar -->
-{% include 'includes/navbar.html' %}
+    <!-- includes navbar -->
+    {% include 'includes/navbar.html' %}
 
     {% block content %}
     {% endblock %}
