@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}create a lead{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+<div>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div>
+            <button type="submit">create a lead</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
