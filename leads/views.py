@@ -12,9 +12,20 @@ User = get_user_model()
 
 class LeadsListView(LoginRequiredMixin, generic.ListView):
     template_name = 'leads/leads_list.html'
+    context_object_name = 'leads'
+  
+    def get_queryset(self):
+        user = self.request.user
+        queryset = Lead.objects.filter(
+            agent=user,
+            agent__isnull=False
+            )
+        return queryset
 
-    queryset = Lead.objects.all()
-    get_object_name = 'leads'   
+    def get_context_data(self, **kwargs):
+        context = super(LeadsListView, self).get_context_data(**kwargs)
+        context['user'] = self.request.user
+        return context
 
 
 class LeadCreateView(LoginRequiredMixin, generic.CreateView):
@@ -26,9 +37,8 @@ class LeadCreateView(LoginRequiredMixin, generic.CreateView):
 
     def form_valid(self, form):
         lead = form.save(commit=False)
-        lead.user = self.request.user
+        lead.agent = self.request.user
         lead.save()
 
         messages.success(self.request, "You have successfully created a lead")
         return super(LeadCreateView, self).form_valid(form)
-
