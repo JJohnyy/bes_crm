@@ -15,6 +15,7 @@
                     <th>Email</th>
                     <th>Phone Number</th>
                     <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,7 +25,8 @@
                     <td>{{ lead.last_name }}</td>
                     <td>{{ lead.email }}</td>
                     <td>{{ lead.phone_number }}</td>
-                    <td><a href="{% url 'leads_update' %}">Edit</a></td>
+                    <td><a href="{% url 'leads_update' lead.pk %}">Edit</a></td>
+                    <td><a href="{% url 'leads_delete' lead.pk %}">Delete</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
