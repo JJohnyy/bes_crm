@@ -6,4 +6,5 @@ urlpatterns = [
     path('', LeadsListView.as_view(), name="leads"),
     path('create/', LeadCreateView.as_view(), name="leads_create"),
     path('<int:pk>/update/', LeadUpdateView.as_view(), name="leads_update"),
+    path('<int:pk>/delete/', LeadUpdateView.as_view(), name="leads_delete"),
 ]
