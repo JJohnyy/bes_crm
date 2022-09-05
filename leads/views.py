@@ -10,10 +10,12 @@ from . models import Lead
 
 User = get_user_model()
 
+
 class LeadsListView(LoginRequiredMixin, generic.ListView):
+    ''' list view of all leads '''
     template_name = 'leads/leads_list.html'
     context_object_name = 'leads'
-  
+
     def get_queryset(self):
         user = self.request.user
         queryset = Lead.objects.filter(
@@ -29,6 +31,7 @@ class LeadsListView(LoginRequiredMixin, generic.ListView):
 
 
 class LeadCreateView(LoginRequiredMixin, generic.CreateView):
+    ''' create a lead '''
     template_name = "leads/create_lead.html"
     form_class = LeadModelForm
 
@@ -42,3 +45,23 @@ class LeadCreateView(LoginRequiredMixin, generic.CreateView):
 
         messages.success(self.request, "You have successfully created a lead")
         return super(LeadCreateView, self).form_valid(form)
+
+
+class LeadUpdateView(LoginRequiredMixin, generic.UpdateView):
+    ''' update a lead '''
+    template_name = 'leads/update_lead.html'
+    form_class = LeadModelForm
+
+    def get_queryset(self):
+        user = self.request.user
+        return Lead.objects.filter(agent=user)
+
+    def get_success_url(self):
+        return reverse('leads:leads')
+
+    def form_valid(self, form):
+        form.save()
+        messages.success('lead has been updated')
+        return super(LeadUpdateView, self).form_valid(form)
+
+

@@ -5,6 +5,7 @@ from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
+
 class Lead(models.Model):
     ''' lead model  '''
     first_name = models.CharField(max_length=20)

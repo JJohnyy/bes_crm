@@ -3,6 +3,7 @@ from .models import Lead
 
 
 class LeadModelForm(forms.ModelForm):
+    ''' creates a new lead '''
     class Meta:
         model = Lead
         fields = (
