@@ -1,13 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'css/leads/leads.css' %}">
+{% endblock %}
+
 {% block content %}
 <h1>my leads</h1>
 <a href="{% url 'leads_create' %}">crate a lead</a>
 
-<div>
-    <div>
-        <table>
+<div class="table-wrapper">
+    <div class="table-responsive table-hover">
+        <table class="table t-wrapper">
             <thead>
                 <tr>
                     <th>First Name</th>
@@ -25,8 +29,8 @@
                     <td>{{ lead.last_name }}</td>
                     <td>{{ lead.email }}</td>
                     <td>{{ lead.phone_number }}</td>
-                    <td><a href="{% url 'leads_update' lead.pk %}">Edit</a></td>
-                    <td><a href="{% url 'leads_delete' lead.pk %}">Delete</a></td>
+                    <td><a class="text-primary" href="{% url 'leads_update' lead.pk %}">Edit</a></td>
+                    <td><a class="text-danger" href="{% url 'leads_delete' lead.pk %}">Delete</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
