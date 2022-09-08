@@ -2,11 +2,12 @@
 body {
     background: white;
     height:100vh;
-    color: #555;
+    color: #285677;
 }
 
 .home-image {
-    width: 500px;
+    min-width: 250px;
+    max-width: 800px;
     margin: auto;
 }
 
@@ -15,7 +16,8 @@ body {
     margin: auto;
     display: flex;
     flex-direction: column;
-    height: 600px;
+    align-items: center;
+    height: 70%;
 }
 
 /* forms styling */
@@ -27,6 +29,10 @@ li {
 
 .nav-item {
     display: block;
+}
+
+.na-link {
+    color: #285677 !important;
 }
 
 label {
@@ -71,8 +77,20 @@ input {
 }
 
 .home-button {
+    text-align: center;
+    width: 200px;
+    margin: auto;
     border-radius: 3px;
     border: none;
     background: #285677;
     color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding-bottom: 0.2em;
+}
+
+.home-button:hover {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
 }
