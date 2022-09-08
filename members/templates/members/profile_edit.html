@@ -4,18 +4,22 @@
 
 {% load static %}
 
+
+
 {% block content %}
 
-<div>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <div>
-            <button type="submit">update profile</button>
-        </div>
-    </form>
+<div class="form-wrapper">
+    <div class="login-form-wrapper">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div>
+                <button class="login-button" type="submit">update profile</button>
+            </div>
+        </form>
+        <a class="profile-link" href="{% url 'change_password' %}">change password</a>
+        <a class="profile-link" href="{% url 'delete_profile' user.pk %}">delete profile</a>
+    </div>
 </div>
-<a href="{% url 'change_password' %}">change password</a>
-<a href="{% url 'delete_profile' user.pk %}">delete</a>
 
 {% endblock %}

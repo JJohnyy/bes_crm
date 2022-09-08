@@ -20,7 +20,12 @@ body {
     height: 70%;
 }
 
-/* forms styling */
+#id_password {
+    display: none;
+}
+/*----------------------------------------------
+ forms styling
+ -------------------------------------------------- */
 
 .helptext,
 li {
@@ -48,9 +53,8 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 1px red;
     width: 80%;
-    height: 500px;
+    height: 80%;
     margin: auto;
 }
 
@@ -66,7 +70,9 @@ input {
 }
 
 
-/*  buttons  */
+/* ----------------------
+buttons 
+ --------------------------*/
 
 .login-button {
     width: 100%;
@@ -74,6 +80,11 @@ input {
     border: none;
     background: #285677;
     color: white;
+}
+
+.login-button:hover {
+    cursor: pointer;
+    background: #678D86;
 }
 
 .home-button {
@@ -89,8 +100,33 @@ input {
     padding-bottom: 0.2em;
 }
 
+.delete-button {
+    text-align: center;
+    width: 200px;
+    margin: auto;
+    border-radius: 3px;
+    border: none;
+    background: #A81F1F;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding-bottom: 0.2em;
+}
+
 .home-button:hover {
     color: white;
     text-decoration: none;
     cursor: pointer;
+    background: #678D86;
+}
+
+.profile-link {
+    margin: 10px;
+    text-decoration: none;
+    color: #376C77;
+}
+
+.profile-link:hover {
+    cursor: pointer;
+    color: #678D86;
 }
