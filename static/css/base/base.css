@@ -4,3 +4,25 @@ body {
     height:100vh;
     color: #555;
 }
+
+
+/* forms styling */
+
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px red;
+    width: 80%;
+    margin: auto;
+}
+
+.login-form-wrapper {
+    width: 315px;
+    margin: auto;
+    border: solid 1px red;
+}
+
+.form {
+    width: 100%;
+}
