@@ -34,7 +34,7 @@ class CustomUserCreationForm(UserCreationForm):
             placeholder = placeholders[field]
             self.fields[field].label = ''
             self.fields[field].widget.attrs['placeholder'] = placeholder
-            
+           
 
 class CustomUserEditForm(UserChangeForm):
     class Meta:
@@ -49,3 +49,18 @@ class CustomUserEditForm(UserChangeForm):
             'is_active',
             'is_staff',
         }
+
+    def __init__(self, *args, **kwargs):
+        """ remove labels, add placeholders """
+        super().__init__(*args, **kwargs)
+        placeholders = {
+            'username': 'Username',
+            'password': 'Password',
+            'first_name': 'First Name',
+            'last_name': 'Last Name',
+            'email': 'Email',
+        }
+        for field in self.fields:
+            placeholder = placeholders[field]
+            self.fields[field].label = ''
+            self.fields[field].widget.attrs['placeholder'] = placeholder

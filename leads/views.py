@@ -68,14 +68,10 @@ class LeadUpdateView(LoginRequiredMixin, generic.UpdateView):
 class LeadDeleteView(LoginRequiredMixin, generic.DeleteView):
     ''' delete a lead '''
     template_name = 'leads/delete_lead.html'
-    
+
     def get_queryset(self):
         user = self.request.user
         return Lead.objects.filter(agent=user)
 
     def get_success_url(self):
         return reverse('leads')
-
-
-
-

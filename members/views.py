@@ -55,5 +55,3 @@ class UserDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = User
     success_url = reverse_lazy('home')
     template_name = 'members/profile_delete.html'
-
-

@@ -6,12 +6,14 @@
 
 {% block content %}
 
+<h1>Are  you sure, you want to delete this lead?</h1>
+
 <div>
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <div>
-            <button type="submit">delete a lead</button>
+            <button class="delete-button" type="submit">delete a lead</button>
         </div>
     </form>
 </div>
