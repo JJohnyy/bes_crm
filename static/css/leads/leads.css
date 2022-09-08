@@ -6,3 +6,19 @@
 a {
     text-decoration: none;
 }
+
+.profile-link {
+    margin: 10px;
+    text-decoration: none;
+    color: #376C77;
+}
+
+.profile-link:hover {
+    cursor: pointer;
+    color: #678D86;
+}
+
+.profile-link:visited {
+    text-decoration: none;
+    color: #376C77;
+}
