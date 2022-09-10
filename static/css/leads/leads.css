@@ -43,3 +43,14 @@ hr {
     width: 60%;
     margin: 20px auto;
 }
+
+/*----------------------------------------------
+media queries
+---------------------------------------------*/
+
+
+@media screen and (max-width: 1179px) {
+    .table-wrapper {
+        width: 80%;
+    }
+}

@@ -51,7 +51,7 @@ dashboard
 }
 
 .dashboard-details-wrapper {
-    width: 30%;
+    width: 50%;
     height: 100%;
     border: solid 1px red;
     display: flex;
@@ -268,3 +268,18 @@ hr {
     width: 60%;
     margin: 20px auto;
 }
+
+
+
+
+/*----------------------------------------------
+media queries
+---------------------------------------------*/
+
+
+@media screen and (max-width: 1179px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+}
+
