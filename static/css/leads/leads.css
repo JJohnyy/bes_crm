@@ -22,3 +22,8 @@ a {
     text-decoration: none;
     color: #376C77;
 }
+
+.heading-1 {
+    text-align: center;
+    margin-top: 50px;
+}

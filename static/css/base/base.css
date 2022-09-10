@@ -184,5 +184,15 @@ buttons
     margin: 10px;
     text-decoration: none;
     cursor: pointer;
-    margin-top: 20px;
 }
+
+
+/*----------------------
+headings 
+-------------------------*/
+
+.heading-1 {
+    text-align: center;
+    margin-top: 50px;
+}
+

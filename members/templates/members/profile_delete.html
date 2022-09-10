@@ -4,14 +4,12 @@
 {% block title %}User Account Delete{% endblock title %}
 
 {% block content %}
-    {% if user.is_authenticated %}
+{% if user.is_authenticated %}
 
-    <form method="post">
-        {% csrf_token %}
-        <h1>Are you sure you want to delete your account?</h1>
-        <button class="delete-button" type="submit">delete account</button>
-    </form>
-    {% else %}
-        <a class="home-button" href="{% url 'login' %}">Login</a>
-    {% endif %}
+<h1 class="heading-1">Are you sure you want to delete your account?</h1>
+<form method="post">
+    {% csrf_token %}
+    <button class="delete-button" type="submit">delete account</button>
+</form>
+{% endif %}
 {% endblock content %}
