@@ -6,8 +6,8 @@
 
 {% block content %}
 
-<div>
-    <div>
+<div class="update-form-wrapper">
+    <div class="update-form-inner-wrapper">
         <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
