@@ -1,5 +1,16 @@
+
+body {
+    background: white;
+    height:100vh;
+    color: #285677;
+}
+
+
+
+/* table css  */
+
 .table-wrapper {
-    width: 80%;
+    width: 60%;
     margin: auto;
 }
 
@@ -10,20 +21,25 @@ a {
 .profile-link {
     margin: 10px;
     text-decoration: none;
-    color: #376C77;
 }
 
 .profile-link:hover {
-    cursor: pointer;
-    color: #678D86;
+    cursor: pointer; 
 }
 
 .profile-link:visited {
     text-decoration: none;
-    color: #376C77;
 }
+
+
+/* headings  */
 
 .heading-1 {
     text-align: center;
     margin-top: 50px;
+}
+
+hr {
+    width: 60%;
+    margin: 20px auto;
 }

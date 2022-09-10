@@ -6,9 +6,9 @@
 
 {% block content %}
 
-<h1>Are  you sure, you want to delete this lead?</h1>
+<h1 class="heading-1">Are  you sure, you want to delete this lead?</h1>
 
-<div>
+<div class='delete-wrapper'>
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
