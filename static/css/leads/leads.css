@@ -50,7 +50,7 @@ messages
 --------------------------*/
 
 .messages {
-    width: 250px;
+    width: 319px;
     margin: 0.5em auto;
     display: flex;
     justify-content: center;
@@ -61,12 +61,11 @@ messages
     width: auto;
     background-color:#f9f8f3;
     color: #188639;
-    margin: 0.5em auto;
-    font-size: 1.5em;
+    margin: auto;
     font-weight: bold;
     list-style-type: none;
     padding: 0.3em;
-    border-radius: 1em;
+    border-radius: 3px;
 }
 
 
@@ -78,5 +77,34 @@ media queries
 @media screen and (max-width: 1179px) {
     .table-wrapper {
         width: 80%;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    #no-more-tables tbody,
+    #no-more-tables tr,
+    #no-more-tables td {
+        display: block;
+    }
+    #no-more-tables thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    #no-more-tables td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #eee;
+        font-size: 12px;
+    }
+    #no-more-tables td:before {
+        content: attr(data-title);
+        position: absolute;
+        left: 6px;
+        font-weight: bold;
+    }
+    #no-more-tables tr {
+        border-bottom: 1px solid #ccc;
     }
 }
