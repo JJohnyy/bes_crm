@@ -5,6 +5,10 @@ body {
     color: #285677;
 }
 
+/*-----------------------------
+home page
+ -----------------------------*/
+
 .home-image {
     min-width: 250px;
     max-width: 800px;
@@ -22,6 +26,28 @@ body {
 
 strong {
     display: none;
+}
+
+
+/*------------------------------
+dashboard
+-----------------------------*/
+
+.dashboard-container {
+    width: 60%;
+    margin: auto;
+    border: solid 1px red;
+    display: flex;
+    height: 70%;
+}
+
+.dashboard-content {
+    width: 50%;
+    height: 50%;
+    border: solid 1px red;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 
@@ -129,6 +155,8 @@ input {
 
 .delete-wrapper {
     margin: auto;
+    width: 200px;
+    margin-top: 50px;
 }
 
 
@@ -145,7 +173,8 @@ buttons
     color: white;
 }
 
-.login-button:hover {
+.login-button:hover,
+.dashboard-button:hover {
     cursor: pointer;
     background: #678D86;
 }
@@ -187,6 +216,18 @@ buttons
     margin: 10px;
     text-decoration: none;
     cursor: pointer;
+}
+
+
+.dasboard-button {
+    width: 310px;
+    height: 100px;
+    margin: 20px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    background: #285677;
+    border-radius: 3px;
 }
 
 
