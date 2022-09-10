@@ -36,7 +36,6 @@ dashboard
 .dashboard-container {
     width: 60%;
     margin: auto;
-    border: solid 1px red;
     display: flex;
     height: 70%;
 }
@@ -44,7 +43,6 @@ dashboard
 .dashboard-content {
     width: 50%;
     height: 50%;
-    border: solid 1px red;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -53,7 +51,6 @@ dashboard
 .dashboard-details-wrapper {
     width: 50%;
     height: 100%;
-    border: solid 1px red;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -146,7 +143,6 @@ input {
     width: 60%;
     margin: auto;
     display: flex;
-    border: solid 1px red;
     height: 70%;
     justify-content: center;
     align-items: center;
@@ -269,6 +265,13 @@ media queries
 @media screen and (max-width: 1179px) {
     .dashboard-container {
         flex-direction: column;
+        align-items: center;
+    }
+    .dashboard-details-wrapper {
+        width: 80%;
+    }
+    .dashboard-content {
+        width: 100%;
     }
 }
 

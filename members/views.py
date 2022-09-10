@@ -32,6 +32,7 @@ class UserEditView(LoginRequiredMixin, generic.UpdateView):
         return User.objects.filter(username=user.username)
   
     def get_success_url(self):
+        messages.success(self.request, 'your profile was updated successfully')
         return reverse("dashboard")
 
 
@@ -47,6 +48,7 @@ class PasswordsChangeView(PasswordChangeView):
     template_name = 'registration/change_password.html'
 
     def get_success_url(self):
+        messages.success(self.request, 'password was changed successfully')
         return reverse("profile_edit")
 
 
@@ -55,3 +57,7 @@ class UserDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = User
     success_url = reverse_lazy('home')
     template_name = 'members/profile_delete.html'
+
+    def get_success_url(self):
+        messages.success(self.request, 'your profile was deleted successfully')
+        return reverse("home")

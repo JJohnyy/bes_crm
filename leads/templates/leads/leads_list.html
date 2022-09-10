@@ -11,8 +11,8 @@
 <div class="table-wrapper">
     <a class="profile-link" href="{% url 'leads_create' %}">crate a lead</a>
 
-    <div class="table-responsive-sm table-striped">
-        <table class="table t-wrapper">
+    <div class="table-responsive table-striped">
+        <table class="table t-wrapper" id="no-more-tables">
             <thead>
                 <tr>
                     <th scope="col">First Name</th>
@@ -26,12 +26,12 @@
             <tbody>
                 {% for lead in leads %}
                 <tr>
-                    <td>{{ lead.first_name }}</td>
-                    <td>{{ lead.last_name }}</td>
-                    <td>{{ lead.email }}</td>
-                    <td>{{ lead.phone_number }}</td>
-                    <td><a class="text-primary" href="{% url 'leads_update' lead.pk %}">Edit</a></td>
-                    <td><a class="text-danger" href="{% url 'leads_delete' lead.pk %}">Delete</a></td>
+                    <td data-title="First Name">{{ lead.first_name }}</td>
+                    <td data-title="Last Name">{{ lead.last_name }}</td>
+                    <td data-title="Email">{{ lead.email }}</td>
+                    <td data-title="Phone Number">{{ lead.phone_number }}</td>
+                    <td data-title="Edit"><a class="text-primary" href="{% url 'leads_update' lead.pk %}">Edit</a></td>
+                    <td data-title="Delete"><a class="text-danger" href="{% url 'leads_delete' lead.pk %}">Delete</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -40,3 +40,11 @@
 </div>
 
 {% endblock %}
+
+<script>
+    let message = document.getElementsByClassName('messages');
+
+setTimeout(function() {
+    message.style.display = 'none';
+}, 3000);
+</script>

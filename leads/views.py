@@ -74,4 +74,5 @@ class LeadDeleteView(LoginRequiredMixin, generic.DeleteView):
         return Lead.objects.filter(agent=user)
 
     def get_success_url(self):
+        messages.success(self.request, 'lead has been deleted')
         return reverse('leads')
