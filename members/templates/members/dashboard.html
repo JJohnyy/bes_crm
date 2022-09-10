@@ -5,6 +5,19 @@
 
 <h1 class="heading-1">Hello {{user.username}}</h1>
 
+<div class="dashboard-container">
+    <div class="dashboard-content">
+        <button class="dasboard-button">create a lead</button>
+        <button class="dasboard-button">update profile</button>
+    </div>
+    <div class="dashboard-content">
+        <h2>my details</h2>
+        <span>first name:{{user.first_name}}</span>
+        <span>last name:{{user.last_name}}</span>
+        <span>phone:{{user.phone_number}}</span>
+        <span>email:{{user.email}}</span>
+    </div>
+</div>
 
 
 {% endblock %}
