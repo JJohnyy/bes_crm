@@ -18,8 +18,10 @@
                 <button class="login-button" type="submit">update profile</button>
             </div>
         </form>
-        <a class="profile-link text-primary" href="{% url 'change_password' %}">change password</a>
-        <a class="profile-link text-danger" href="{% url 'delete_profile' user.pk %}">delete profile</a>
+        <div class="update-form-links-wrapper">
+            <a class="profile-link text-primary" href="{% url 'change_password' %}">change password</a>
+            <a class="profile-link text-danger" href="{% url 'delete_profile' user.pk %}">delete profile</a>
+        </div>
     </div>
 </div>
 
