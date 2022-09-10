@@ -5,13 +5,17 @@ body {
     color: #285677;
 }
 
+#navbarSupportedContent {
+    margin-left: 100px;
+}
+
 /*-----------------------------
 home page
  -----------------------------*/
 
 .home-image {
-    min-width: 250px;
-    max-width: 800px;
+    min-width: 300px;
+    max-width: 50%;
     margin: auto;
 }
 
@@ -21,7 +25,7 @@ home page
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 70%;
+    height: auto;
 }
 
 strong {
@@ -117,10 +121,6 @@ li {
     color: #285677 !important;
 }
 
-label {
-    
-}
-
 input {
     width: 100%;
     border-radius: 3px;
@@ -152,6 +152,7 @@ input {
 }
 
 .update-form-wrapper {
+    min-width: 300px;
     width: 60%;
     margin: auto;
     display: flex;
