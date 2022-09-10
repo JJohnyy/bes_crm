@@ -1,4 +1,4 @@
-from django.shortcuts import render, reverse
+from django.shortcuts import reverse
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.views import generic
@@ -74,5 +74,5 @@ class LeadDeleteView(LoginRequiredMixin, generic.DeleteView):
         return Lead.objects.filter(agent=user)
 
     def get_success_url(self):
-        messages.success(self.request, 'lead has been deleted')
+        messages.info(self.request, 'lead has been deleted')
         return reverse('leads')

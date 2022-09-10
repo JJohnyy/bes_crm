@@ -287,3 +287,11 @@ media queries
     }
 }
 
+@media screen and (max-width:434px) {
+    .update-form-links-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+

@@ -42,7 +42,7 @@ class DashboardView(LoginRequiredMixin, generic.TemplateView):
     success_url = reverse_lazy('dashboard')
 
 
-class PasswordsChangeView(PasswordChangeView):
+class PasswordsChangeView(LoginRequiredMixin, PasswordChangeView):
     ''' CHANGE PASSWORD in a profile page view  '''
     form_class = PasswordChangeForm
     template_name = 'registration/change_password.html'
@@ -59,5 +59,5 @@ class UserDeleteView(LoginRequiredMixin, generic.DeleteView):
     template_name = 'members/profile_delete.html'
 
     def get_success_url(self):
-        messages.success(self.request, 'your profile was deleted successfully')
+        messages.info(self.request, 'your profile was deleted successfully')
         return reverse("home")
