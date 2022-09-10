@@ -4,7 +4,7 @@ from django.views import generic
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import PasswordChangeView, PasswordChangeForm
-from django.views.generic.edit import DeleteView
+# from django.views.generic.edit import DeleteView
 from django.urls import reverse_lazy
 from .forms import CustomUserCreationForm, CustomUserEditForm
 
@@ -17,7 +17,7 @@ class UserRegisterView(generic.CreateView):
     '''creates user'''
     form_class = CustomUserCreationForm
     template_name = "registration/registration.html"
-   
+
     def get_success_url(self):
         return reverse("login")
 
@@ -30,7 +30,7 @@ class UserEditView(LoginRequiredMixin, generic.UpdateView):
     def get_queryset(self):
         user = self.request.user
         return User.objects.filter(username=user.username)
-  
+
     def get_success_url(self):
         messages.success(self.request, 'your profile was updated successfully')
         return reverse("dashboard")
