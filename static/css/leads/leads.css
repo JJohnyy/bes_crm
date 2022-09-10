@@ -44,6 +44,32 @@ hr {
     margin: 20px auto;
 }
 
+
+/*------------------------ 
+messages  
+--------------------------*/
+
+.messages {
+    width: 250px;
+    margin: 0.5em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.success {
+    width: auto;
+    background-color:#f9f8f3;
+    color: #188639;
+    margin: 0.5em auto;
+    font-size: 1.5em;
+    font-weight: bold;
+    list-style-type: none;
+    padding: 0.3em;
+    border-radius: 1em;
+}
+
+
 /*----------------------------------------------
 media queries
 ---------------------------------------------*/
