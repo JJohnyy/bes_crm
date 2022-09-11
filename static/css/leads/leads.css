@@ -72,6 +72,18 @@ messages
     border-radius: 3px;
 }
 
+.info {
+    width: auto;
+    background-color:#f9f8f3;
+    color: #9c0d0d;
+    margin: 0.5em auto;
+    font-size: 1.5em;
+    font-weight: bold;
+    list-style-type: none;
+    padding: 0.3em;
+    border-radius: 1em;
+}
+
 
 /*----------------------------------------------
 media queries
