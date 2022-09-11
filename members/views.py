@@ -4,7 +4,6 @@ from django.views import generic
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import PasswordChangeView, PasswordChangeForm
-# from django.views.generic.edit import DeleteView
 from django.urls import reverse_lazy
 from .forms import CustomUserCreationForm, CustomUserEditForm
 
