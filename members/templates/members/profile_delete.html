@@ -7,6 +7,7 @@
 {% if user.is_authenticated %}
 
 <h1 class="heading-1">Are you sure you want to delete your account?</h1>
+<br>
 <form method="post">
     {% csrf_token %}
     <div class="delete-button-wrapper">
