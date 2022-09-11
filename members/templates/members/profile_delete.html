@@ -9,7 +9,9 @@
 <h1 class="heading-1">Are you sure you want to delete your account?</h1>
 <form method="post">
     {% csrf_token %}
-    <button class="delete-button" type="submit">delete account</button>
+    <div>
+        <button class="delete-button" type="submit">delete account</button>
+    </div>
 </form>
 {% endif %}
 {% endblock content %}
