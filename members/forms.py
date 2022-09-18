@@ -1,7 +1,5 @@
-from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
-from django.core.exceptions import ValidationError
 
 User = get_user_model()
 
@@ -33,8 +31,8 @@ class CustomUserCreationForm(UserCreationForm):
         for field in self.fields:
             placeholder = placeholders[field]
             self.fields[field].label = ''
-            self.fields[field].widget.attrs['placeholder'] = placeholder
-           
+            self.fields[field].widget.attrs['placeholder'] = placeholder  
+
 
 class CustomUserEditForm(UserChangeForm):
     class Meta:
