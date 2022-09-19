@@ -10,7 +10,7 @@ from django.contrib.auth import get_user_model
 class LandingPageTest(TestCase):
 
     def test_login_url(self):
-        login_url  = 'login/'
+        login_url = 'login/'
         self.assertEqual(settings.LOGIN_URL, login_url)
 
     def test_status_code(self):
