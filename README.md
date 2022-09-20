@@ -100,24 +100,24 @@ employees who could use this app
 |--|--|--|
 |PC|home page|[homepage](media/readmedocs/wireframes/home-page.png)|
 |mobile|home page mobile|[homepagemobile](media/readmedocs/wireframes/mobile/home_page.png)|
-|PC|login page|[homepage](media/readmedocs/wireframes/login.png)|
-|mobile|login page||
-|PC|signup page|[homepage](media/readmedocs/wireframes/signup.png)|
-|mobile|signup page||
-|PC|dashboard|[homepage](media/readmedocs/wireframes/dashboard.png)|
-|mobile|dashboard||
-|PC|lead list|[homepage](media/readmedocs/wireframes/lead list.png)|
-|mobile|lead list||
-|PC|create a lead|[homepage](media/readmedocs/wireframes/create a lead.png)|
-|mobile|create a lead||
-|PC|delete a lead|[homepage](media/readmedocs/wireframes/deleate a lead.png)|
-|mobile|delete a lead||
-|PC|update a lead|[homepage](media/readmedocs/wireframes/lead update.png)|
-|mobile|udpate a lead||
-|PC|udpate a profile|[homepage](media/readmedocs/wireframes/update profile.png)|
-|mobile|update a profile||
-|PC|delete a profile|[homepage](media/readmedocs/wireframes/profile delete.png)|
-|mobile|delete a profile||
+|PC|login page|[login](media/readmedocs/wireframes/login.png)|
+|mobile|login page|[loginmobile](media/readmedocs/wireframes/mobile/login.png)|
+|PC|signup page|[signup](media/readmedocs/wireframes/signup.png)|
+|mobile|signup page|[signupmobile](media/readmedocs/wireframes/mobile/signup.png)|
+|PC|dashboard|[dashboard](media/readmedocs/wireframes/dashboard.png)|
+|mobile|dashboard|[dashboardmobile](media/readmedocs/wireframes/mobile/dashboard.png)|
+|PC|lead list|[leadlist](media/readmedocs/wireframes/leadlist.png)|
+|mobile|lead list|[leadsmobile](media/readmedocs/wireframes/mobile/leadlist.png)|
+|PC|create a lead|[createalead](media/readmedocs/wireframes/createalead.png)|
+|mobile|create a lead|[createleadmobile](media/readmedocs/wireframes/mobile/createalead.png)
+|PC|delete a lead|[deletealead](media/readmedocs/wireframes/deleatealead.png)|
+|mobile|delete a lead|[deletealeadmobile](media/readmedocs/wireframes/mobile/deletealead.png)|
+|PC|update a lead|[leadupdate](media/readmedocs/wireframes/leadupdate.png)|
+|mobile|udpate a lead|[leadupdatemobile](media/readmedocs/wireframes/mobile/updateyourlead.png)|
+|PC|udpate a profile|[updateprofile](media/readmedocs/wireframes/updateprofile.png)|
+|mobile|update a profile|[updateprofilemobile](media/readmedocs/wireframes/mobile/updateyourprofile.png)|
+|PC|delete a profile|[profiledelete](media/readmedocs/wireframes/profiledelete.png)|
+|mobile|delete a profile|[profiledeletemobile](media/readmedocs/wireframes/mobile/profiledelete.png)|
 
 \
 &nbsp;
@@ -204,7 +204,16 @@ excludefields
 
 ## Existing Features
 
-### Navbar
+|Name|link|function|comments|
+|--|--|--|--|
+|navbar|[link](media/readmedocs/features/navbar.png)|helps navigate a site|from bootstrap without additional changes|
+|login button|[link](media/readmedocs/features/login button.png)|positiove button|this style of button is used trhu the page to confirm/submit positive actions|
+|delete button|[link](media/readmedocs/features/delete button.png)|negative button|this style of button is used trhu the page to confirm negative actions|
+|home button|[link](media/readmedocs/features/home button.png)|positive button|very similar to login button|
+|hover|[link](media/readmedocs/features/hover.png)|hobvering effect|indicates a hover with the mouse over the button|
+|success message|[link](media/readmedocs/features/successmessage.png)|signals postive actions|is used whener there is a positive action on a page|
+|delete message|[link](media/readmedocs/features/info-deletemedia/readmedocs/features/info - delete message.pngmessage.png)|signals negative actions|is used whenever there is a negative action on a page|
+
 
 ## Authentication
 The authentication process for the application has three parts.
@@ -229,6 +238,9 @@ The sign-in form requires only two fields to be entered.
 * Password
 
 ## Features to be Implemented
+* lead count
+* reward input
+* follow up feature
 
 \
 &nbsp;
@@ -353,8 +365,41 @@ ALLOWED_HOSTS = ['YOUR_PROJECT_NAME.herokuapp.com', 'localhost']
 ## Code Validation
 
 ### HTML
+| File Name | link | Result | Comments |
+|--|--|--|--|
+|homepage|[link](media/readmedocs/html/homepage.png)|PASS||
+|login|[link](media/readmedocs/html/login.png)|PASS||
+|register|[link](media/readmedocs/html/register.png)|4 errors|all coming from django builtin form|
 
 ### CSS
+| File Name | Link | Result | Comments |
+|--|--|--|--|
+|base|[link](media/readmedocs/css/base.png)|PASS||
+|leads|[link](media/readmedocs/css/leads.png)|PASS||
 
 ### Python
+| File Name | link | Result | Comments |
+|--|--|--|--|
+|leads views|[link](media/readmedocs/pep8/leads-views.png)|PASS||
+|leads urls|[link](media/readmedocs/pep8/leads-urls.png)|PASS||
+|leads forms|[link](media/readmedocs/pep8/leads-forms.png)|PASS||
+|leads models|[link](media/readmedocs/pep8/leads-models.png)|PASS||
+|members forms|[link](media/readmedocs/pep8/memebers-forms.png)|1 warning|trailing whitespace - could get rid of it even after many tries|
+|members urls|[link](media/readmedocs/pep8/members-urls.png)|PASS||
+|members views|[link](media/readmedocs/pep8/members-views.png)|PASS||
 
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
+
+## Creadits
+* [Simen Daehlin](https://github.com/Eventyret "Simen Daehlin") for advice and direction and continual support
+* [Codemy.com](https://www.youtube.com/channel/UCFB0dxMudkws1q8w5NJEAmw "Codemy.com") for help on Django
+
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
