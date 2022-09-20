@@ -96,7 +96,28 @@ employees who could use this app
 &nbsp;
 
 # Wireframes
-
+| type | name | link | 
+|--|--|--|
+|PC|home page|[homepage](media/readmedocs/wireframes/home-page.png)|
+|mobile|home page mobile|[homepagemobile](media/readmedocs/wireframes/mobile/home_page.png)|
+|PC|login page|[homepage](media/readmedocs/wireframes/login.png)|
+|mobile|login page||
+|PC|signup page|[homepage](media/readmedocs/wireframes/signup.png)|
+|mobile|signup page||
+|PC|dashboard|[homepage](media/readmedocs/wireframes/dashboard.png)|
+|mobile|dashboard||
+|PC|lead list|[homepage](media/readmedocs/wireframes/lead list.png)|
+|mobile|lead list||
+|PC|create a lead|[homepage](media/readmedocs/wireframes/create a lead.png)|
+|mobile|create a lead||
+|PC|delete a lead|[homepage](media/readmedocs/wireframes/deleate a lead.png)|
+|mobile|delete a lead||
+|PC|update a lead|[homepage](media/readmedocs/wireframes/lead update.png)|
+|mobile|udpate a lead||
+|PC|udpate a profile|[homepage](media/readmedocs/wireframes/update profile.png)|
+|mobile|update a profile||
+|PC|delete a profile|[homepage](media/readmedocs/wireframes/profile delete.png)|
+|mobile|delete a profile||
 
 \
 &nbsp;
@@ -114,23 +135,62 @@ there was no choice of a new font, everythnig was clearly visible with the defau
 [link](media/readmedocs/colors.png 'colors')
 
 #### Colors and contrast validations
-
+[contrast1](media/readmedocs/contrast-1.png 'colors contrast')
+[contrast2](media/readmedocs/contrast-2.png 'colors contrast')
 
 | Hex Value |Text | Button | Background |
 | -- | -- | -- | -- |
 |#FFFFF|||x|
-
+|#285677||x||
+|#285670|x|x||
+|#|678D86||x|
 
 &nbsp;
 
 
 ## Models
 
-### mleads
+### leads
 | Name | Key | Type | Other Details
 | -- | -- | -- | --
+|first_name||CharField|max_length=20
+|last_name||CharField|max_length=20
+|description||TextField|
+|date_added||DateTimeField|auto_now_add=True
+|phone_number||CharField|max_length=20
+|email||EmailField|
+|agent|User|ForeignKey|null=True, blank=True, on_delete=CASCADE
+
 
 ## Forms
+
+LeadModelForm 
+fields
+* first name
+* last name
+* description
+* phone number
+* email
+
+CustomerCretionForm
+fields
+* username
+* email
+* password1
+* password2
+* first_name
+* last_name
+
+CustomUserEdit
+excludefields
+* password
+* last-login
+* is_superuser
+* groups
+* date_joined
+* user permissions
+* is_active
+* is_staff
 
 
 \
