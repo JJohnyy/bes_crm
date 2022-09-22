@@ -2,7 +2,7 @@
 
 \
 &nbsp;
-Live link can be found here - [link]( "live app")
+Live link can be found here - [link](http://bescrm.herokuapp.com/ "live app")
 \
 
 &nbsp;
@@ -143,7 +143,7 @@ there was no choice of a new font, everythnig was clearly visible with the defau
 |#FFFFF|||x|
 |#285677||x||
 |#285670|x|x||
-|#|678D86||x|
+|#678D86||x|
 
 &nbsp;
 
@@ -394,7 +394,8 @@ ALLOWED_HOSTS = ['YOUR_PROJECT_NAME.herokuapp.com', 'localhost']
 \
 &nbsp;
 
-## Creadits
+## Credits
+* Codeinstitute for big support, student care and tutors, thank you
 * [Simen Daehlin](https://github.com/Eventyret "Simen Daehlin") for advice and direction and continual support
 * [Codemy.com](https://www.youtube.com/channel/UCFB0dxMudkws1q8w5NJEAmw "Codemy.com") for help on Django
 
