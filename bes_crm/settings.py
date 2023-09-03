@@ -31,7 +31,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['bescrm.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['bescrm.herokuapp.com', 'localhost', 'king-prawn-app-hdfq8.ondigitalocean.app',]
 
 
 # Application definition
